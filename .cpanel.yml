@@ -2,5 +2,6 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/koxbjl87skrt/
+    - /bin/cp -r * $DEPLOYPATH #copy all from root
     - /bin/cp -r ./public/* $DEPLOYPATH/public_html/
     
