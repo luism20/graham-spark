@@ -61,7 +61,7 @@
 
     <!-- Company Name -->
     <div class="form-group row">
-        <label class="col-md-4 col-form-label text-md-right">Company</label>
+        <label class="col-md-4 col-form-label text-md-right">{{__('Company Name')}}</label>
 
         <div class="col-md-6">
             <input type="text" class="form-control" name="company"

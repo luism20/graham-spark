@@ -51,6 +51,12 @@
 
                                 <a class="btn btn-link" href="{{ url('/password/reset') }}">{{__('Forgot Your Password?')}}</a>
                             </div>
+                            <div class="col-md-6 offset-md-4">                                
+                                <a href="/register" style="padding-top: 20px;display: inherit;font-size: 0.8em;">                                    
+                                        {{__('New to Grahammind? Sign up')}}
+                                </a>
+                            </div>
+                            
                         </div>
                     </form>
                 </div>

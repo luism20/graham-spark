@@ -1,6 +1,6 @@
 <nav class="navbar navbar-light navbar-expand-md navbar-spark">
     <div class="container">
-        <a class="navbar-brand" href="#">
+        <!--<a class="navbar-brand" href="#">
             <svg class="h-37 w-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 43" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <defs>
                     <path id="a" d="M22 2.5c4-3.8 6.7-2.4 6 3.2l-1.5 10h4.2c5.5 0 6.7 3.2 2.6 7L14 40.7c-4 3.7-6.7 2.3-6-3.3l1.5-10H5.3c-5.5 0-6.7-3-2.6-7L22 2.4z"></path>
@@ -25,6 +25,9 @@
                     </g>
                 </g>
             </svg>
+        </a>-->
+        <a class="navbar-brand" href="#">
+            <img src="{{asset('img/logo.png')}}" class="img-responsive">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                 aria-expanded="false" aria-label="Toggle navigation">
