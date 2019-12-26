@@ -14,3 +14,9 @@
 Route::get('/', 'HomeController@show');
 
 Route::get('/home', 'HomeController@show');
+
+Route::get('/setup', 'HomeController@setup');
+
+Route::get('/excel', 'HomeController@excel');
+
+Route::post('/excel/import', 'HomeController@importDataStore');

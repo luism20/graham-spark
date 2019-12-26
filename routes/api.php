@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\MindController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -16,3 +18,8 @@ Route::group([
 ], function () {
     //
 });
+
+
+Route::post('appCreated', 'MindController@mindAppCreated');
+Route::post('appUpdated', 'MindController@mindAppUpdated');
+Route::get('test', 'MindController@test');

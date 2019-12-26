@@ -18,6 +18,7 @@
             </button>
 
             <div id="navbarSupportedContent" class="collapse navbar-collapse">
+               
                 <ul class="navbar-nav mr-auto">
                     @includeIf('spark::nav.user-left')
                 </ul>
@@ -41,7 +42,7 @@
                 </svg>
                 @{{notificationsCount}}
                 </a>
-
+                
                 <ul class="navbar-nav ml-4">
                     <li class="nav-item dropdown">
                         <a href="#" class="d-block d-md-flex text-center nav-link dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown"
@@ -49,7 +50,7 @@
                             <img :src="user.photo_url" class="dropdown-toggle-image spark-nav-profile-photo" alt="{{__('User Photo')}}" />
                             <span class="d-none d-md-block">@{{ user.name }}</span>
                         </a>
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton" style="position: absolute">
                             <!-- Impersonation -->
                             @if (session('spark:impersonator'))
                                 <h6 class="dropdown-header">{{__('Impersonation')}}</h6>
