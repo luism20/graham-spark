@@ -42,6 +42,26 @@ class HomeController extends Controller
         }        
     }
 
+    public function financialAnalysis()
+    {
+        $savedCompany = $this->getCompany(Auth::id());
+        if(isset($savedCompany)) {
+            return view('dashboard/financial-analysis');    
+        } else {
+            return $this->setup();
+        }        
+    }
+
+    public function roa()
+    {
+        $savedCompany = $this->getCompany(Auth::id());
+        if(isset($savedCompany)) {
+            return view('dashboard/return-asset');    
+        } else {
+            return $this->setup();
+        }        
+    }
+
     /**
      * Show the application setup.
      *

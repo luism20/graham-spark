@@ -45,13 +45,13 @@ width: 100%;  }
                     </h3>
                     <ul class="nav flex-column mb-4 ">
                         <li class="nav-item ">
-                            <a class="nav-link active" href="/general-view" >                                
+                            <a class="nav-link active" href="/general-view" aria-controls="announcements" role="tab" data-toggle="tab">                                
                                 General view
                             </a>
                         </li>
 
                         <li class="nav-item ">
-                            <a class="nav-link" href="/financial-analysis" >
+                            <a class="nav-link" href="/financial-analysis" aria-controls="metrics" role="tab" data-toggle="tab" >
                                 Financial Analysis
                             </a>
                         </li>
@@ -61,12 +61,12 @@ width: 100%;  }
                     </h3>
                     <ul class="nav flex-column mb-4 ">                       
                         <li class="nav-item">
-                            <a class="nav-link" href="/balance-sheet" >
+                            <a class="nav-link" href="/balance-sheet" aria-controls="users" role="tab" data-toggle="tab">
                                 Balance Sheet
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/pnl" >
+                            <a class="nav-link" href="/pnl" aria-controls="users" role="tab" data-toggle="tab">
                                 Profit and Loses
                             </a>
                         </li>                        
@@ -80,7 +80,12 @@ width: 100%;  }
                     
                     <!-- Metrics -->
                     <div role="tabcard" class="tab-pane active" id="metrics" >
-                        <iframe src="https://sense-demo.qlik.com/single/?appid=133dab5d-8f56-4d40-b3e0-a6b401391bde&sheet=kHgmg" frameborder="0"></iframe>
+                        <iframe id="Example2"
+                            title="iframe Example 2"
+                            width="400" height="300"
+                            style="border:none"
+                            src="https://54.159.127.9/single/?appid=0fe6d036-9069-410c-9754-543056198d49&obj=ppJJCcK">
+</iframe>
                     </div>
                     
                 </div>             
