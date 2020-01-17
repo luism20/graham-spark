@@ -7,6 +7,9 @@ use Illuminate\Support\Facades\Storage;
 
 use App\Company;
 use App\User;
+use App\QlikObject;
+
+use Illuminate\Support\Facades\Log;
 
 
 use Auth;
@@ -35,8 +38,10 @@ class HomeController extends Controller
     public function show()
     {
         $savedCompany = $this->getCompany(Auth::id());
+        $generalViewObject = $this->getGeneralViewObject($savedCompany->id);
+        Log::Debug(json_encode($generalViewObject));
         if(isset($savedCompany)) {
-            return view('dashboard/home');    
+            return view('dashboard/home', compact('generalViewObject'));    
         } else {
             return $this->setup();
         }        
@@ -87,6 +92,11 @@ class HomeController extends Controller
     private function getCompany($userId) {
         $savedCompany = Company::where('userId', $userId)->first(); 
         return $savedCompany;
+    }
+
+    private function getGeneralViewObject($companyId) {
+        $qlikObject = QlikObject::where('companyId', $companyId)->first(); 
+        return $qlikObject;
     }
 
     public function importDataStore(Request $request){

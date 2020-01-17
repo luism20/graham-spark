@@ -79,8 +79,8 @@ width: 100%;  }
                 <div class="tab-content">
                     
                     <!-- Metrics -->
-                    <div role="tabcard" class="tab-pane active" id="metrics" >
-                        <!--<iframe src="https://sense-demo.qlik.com/single/?appid=133dab5d-8f56-4d40-b3e0-a6b401391bde&sheet=kHgmg" frameborder="0"></iframe>-->
+                    <div role="tabcard" class="tab-pane active" id="metrics" >                       
+                        <iframe src="https://54.159.127.9/single/?appid={{$generalViewObject->mainAppId}}&sheet={{$generalViewObject->objectId}}&select=clearall&obj=ppJJCcK&opt=ctxmenu,currsel" style="border:none;width:100%;height:100%;"></iframe>
                     </div>
                     
                 </div>             
