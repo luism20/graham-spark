@@ -67,7 +67,7 @@ width: 100%;  }
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/pnl" >
-                                Profit and Loses
+                                Profit and Loss
                             </a>
                         </li>                        
                     </ul>
@@ -80,7 +80,7 @@ width: 100%;  }
                     
                     <!-- Metrics -->
                     <div role="tabcard" class="tab-pane active" id="metrics" >
-                        <iframe src="https://sense-demo.qlik.com/single/?appid=133dab5d-8f56-4d40-b3e0-a6b401391bde&sheet=kHgmg" frameborder="0"></iframe>
+                        <!--<iframe src="https://sense-demo.qlik.com/single/?appid=133dab5d-8f56-4d40-b3e0-a6b401391bde&sheet=kHgmg" frameborder="0"></iframe>-->
                     </div>
                     
                 </div>             

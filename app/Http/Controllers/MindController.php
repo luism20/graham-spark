@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Subscription;
 use App\Company;
+use App\QlikObject;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 
 class MindController extends Controller
@@ -138,6 +140,37 @@ class MindController extends Controller
     public function mindAppUpdated(Request $request) {
 
     	return $this->mindAppCreated($request);
+    }
+
+    public function mindAppObjectsUpdated(Request $request) {
+
+        if(isset($request->companyId)) {
+
+            $companyId = $request->companyId;
+            $mainAppId = $request->mainAppId;
+            $objectList = $request->objectList;
+            $objectArray = json_decode($objectList);
+
+
+            foreach($objectArray as $object) {
+                $newObject = new QlikObject;
+                $newObject->companyId = $companyId;
+                $newObject->mainAppId = $mainAppId;
+                $newObject->objectId = $object->id;
+                $newObject->objectName = $object->name;
+                $newObject->save();
+                //Log::Debug(json_encode($object));
+            }
+            
+
+            $savedCompany = Company::where('id', $companyId)->first();
+            if(isset($savedCompany)) {
+                $savedCompany->mainAppId = $mainAppId;
+                $savedCompany->save();
+            }
+        }
+
+        return response('ok', 200)->header('Content-Type', 'application/json');
     }
 
     public function test(Request $request) {

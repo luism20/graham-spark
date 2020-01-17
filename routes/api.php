@@ -22,4 +22,6 @@ Route::group([
 
 Route::post('appCreated', 'MindController@mindAppCreated');
 Route::post('appUpdated', 'MindController@mindAppUpdated');
+Route::post('appObjectsUpdated', 'MindController@mindAppObjectsUpdated');
+
 Route::get('test', 'MindController@test');
